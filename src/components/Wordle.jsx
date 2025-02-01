@@ -53,9 +53,9 @@ const Wordle = () => {
       <h1 className="text-2xl font-bold">Wordle Game</h1>
       <p className="text-gray-500">Guess the 5-letter word!</p>
       <div className='flex flex-col'>
-        <span className='flex'><div className='bg-green-500 h-5 w-5'> </div> = Correct letter in the correct position.</span>
-        <span className='flex'><div className='bg-yellow-500 h-5 w-5'> </div> = Correct letter in the wrong position.</span>
-        <span className='flex'><div className='bg-gray-400 h-5 w-5'> </div> = Incorrect letter.</span>
+        <span className='flex text-green-500 font-semibold'>Correct letter in the correct position.</span>
+        <span className='flex text-yellow-500 font-semibold'>Correct letter in the wrong position.</span>
+        <span className='flex text-gray-400 font-semibold'>Incorrect letter.</span>
       </div>
       <div className="flex flex-col gap-2">
         {guesses.map((guess, i) => (

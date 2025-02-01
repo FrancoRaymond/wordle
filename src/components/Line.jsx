@@ -21,7 +21,7 @@ const Line = ({ guess, solution }) => {
     tiles.push(
       <div
         key={i}
-        className={`h-12 w-12 border border-gray-400 flex items-center justify-center text-xl font-bold uppercase ${bgColor} text-white`}
+        className={`h-16 w-16 border border-gray-400 flex items-center justify-center text-xl font-bold uppercase ${bgColor} text-white`}
       >
         {char}
       </div>
