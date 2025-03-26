@@ -52,18 +52,14 @@ const Wordle = () => {
     <div className="py-10 flex flex-col items-center gap-4">
       <h1 className="text-2xl font-bold">Wordle Game</h1>
       <p className="text-gray-500">Guess the 5-letter word!</p>
-      <div className='flex flex-col'>
-        <span className='flex text-green-500 font-semibold'>Correct letter in the correct position.</span>
-        <span className='flex text-yellow-500 font-semibold'>Correct letter in the wrong position.</span>
-        <span className='flex text-gray-400 font-semibold'>Incorrect letter.</span>
+      <div className='flex flex-col items-center'>
+        <span className='text-green-500 font-semibold'>Correct letter in the correct position.</span>
+        <span className='text-yellow-500 font-semibold'>Correct letter in the wrong position.</span>
+        <span className='text-gray-400 font-semibold'>Incorrect letter.</span>
       </div>
       <div className="flex flex-col gap-2">
         {guesses.map((guess, i) => (
-          <Line
-            key={i}
-            guess={guess === null ? (i === guesses.findIndex((g) => g === null) ? currentGuess : '') : guess}
-            solution={solution}
-          />
+          <Line key={i} guess={guess} solution={solution} />
         ))}
       </div>
       {!gameOver && (

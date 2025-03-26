@@ -5,16 +5,16 @@ const Line = ({ guess, solution }) => {
   const wordLength = 5;
 
   for (let i = 0; i < wordLength; i++) {
-    const char = guess[i] || '';
-    let bgColor = 'bg-gray-200'; 
+    const char = guess ? guess[i] : ''; 
+    let bgColor = 'bg-gray-200';
 
     if (solution && char) {
       if (char === solution[i]) {
         bgColor = 'bg-green-500';
       } else if (solution.includes(char)) {
-        bgColor = 'bg-yellow-500'; 
+        bgColor = 'bg-yellow-500';
       } else {
-        bgColor = 'bg-gray-400'; 
+        bgColor = 'bg-gray-400';
       }
     }
 
